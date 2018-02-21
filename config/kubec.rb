@@ -11,6 +11,7 @@ deployment :web do
 
       env 'DATABASE_URL', fetch(:database_url)
       env 'SECRET_KEY_BASE', fetch(:secret)
+      env 'RAILS_SERVE_STATIC_FILES', true
     end
   end
 end
