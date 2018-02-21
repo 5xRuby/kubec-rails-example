@@ -16,6 +16,8 @@ RUN bundle install --deployment
 
 ADD . $APP_HOME
 
+RUN rake assets:precompile
+
 EXPOSE 3000
 
 CMD rake db:migrate && rails s
